@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Submissions</title>
+</head>
+<body>
+    <h1>All Submissions</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>DOB</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for submission in submissions %}
+            <tr>
+                <td>{{ submission.id }}</td>
+                <td>{{ submission.name }}</td>
+                <td>{{ submission.email }}</td>
+                <td>{{ submission.phone }}</td>
+                <td>{{ submission.address }}</td>
+                <td>{{ submission.gender }}</td>
+                <td>{{ submission.dob }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
